@@ -1,13 +1,9 @@
 package BaekJoon;
 
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
-public class Num10828 {
+public class Num10828_1 { // 테스트용 클래스
 
 
     public static void main(String[] args) {
@@ -16,21 +12,46 @@ public class Num10828 {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         // 입력값은 이렇게 주어질 것.
 
+        String[] input = {
+
+                "push 1",
+                "push 2",
+                "top",
+                "size",
+                "empty",
+                "pop",
+                "pop",
+                "pop",
+                "size",
+                "empty",
+                "pop",
+                "push 3",
+                "empty",
+                "top"};
+
+        String [] input2 = {
+
+                "pop",
+                "top",
+                "push 123",
+                "top",
+                "pop",
+                "top",
+                "pop"};
+
+
         try {
 
 
             int num = Integer.parseInt(br.readLine());
-
-            ArrayList<Integer> stack_list = new ArrayList<>();
             String order = "";
-
-
+            ArrayList<Integer> stack_list = new ArrayList<>();
             for (int i = 0; i < num; i++) {
-                
+                System.out.println(i);
                 int size = stack_list.size();
-                String next = i==stack_list.size()-1? "" : "\n" ; // 마지막 개행을 없애기 위한 가라방식.
-                 order = br.readLine();  //실제 제출해야하는 코드
-
+                String next = i==13? "" : "\n" ; // 마지막 개행을 없애기 위한 가라방식.
+                // order = br.readLine();  실제 제출해야하는 코드
+                order = input2[i];
 
                 String[] order_list = order.split(" "); //이 문자열 배열도 굳이 push 이외에는 사용되지 않기 때문에
                 // 공백있는지 검사하고 없으면 그냥 문자열로 받고 공백있으면 배열로 받던지 해도 괜찮을 듯.
@@ -40,7 +61,7 @@ public class Num10828 {
                     // 명령어가 push일떄는 index가 같이 주어지기 때문에 위에서 배열로 명령어를 받았을때 index1에는 명령어로 주어진 숫자가 있을 것이다.
                     // 이를 idx변수에 집어넣는다.
                     stack_list.add(value);
-
+                    System.out.println("value  = " + value);
 
 
                 } else if (order_list[0].equals("pop")) {
@@ -75,7 +96,9 @@ public class Num10828 {
             }
 
 
-
+            bw.write("\b");
+            bw.write("\b");
+            bw.write("\b");
             bw.flush();
             bw.close();
             br.close();
