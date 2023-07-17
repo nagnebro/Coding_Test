@@ -96,6 +96,7 @@ public class Num10828_1 { // 테스트용 클래스
             }
 
 
+
             bw.write("\b");
             bw.write("\b");
             bw.write("\b");

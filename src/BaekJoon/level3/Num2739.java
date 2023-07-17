@@ -1,4 +1,4 @@
-package BaekJoon;
+package BaekJoon.level3;
 import java.util.Scanner;
 
 public class Num2739 {
