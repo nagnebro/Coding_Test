@@ -11,6 +11,15 @@ public class Num1152 {
 
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
+//        if((str.charAt(0)+"").equals(" ")){
+//            str = str.substring(1);
+//        }
+//        if((str.charAt(str.length()-1)+"").equals(" ")) {
+//
+//            str = str.substring(0,str.length()-1);
+//
+//        }
+        // 공백으로 시장해서
         System.out.println(str.trim().split(" ").length);
     }
 }
