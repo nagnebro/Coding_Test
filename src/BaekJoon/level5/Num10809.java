@@ -8,28 +8,21 @@ public class Num10809 {
 
         Scanner sc = new Scanner(System.in);
         String str = sc.next();
-
+        String result = "";
         char ascii = 'a';
 
-        for(int i = 'a' ; i <= 'z' ; i++){
+        for (int i = 'a'; i <= 'y'; i++) {
 
-            if(str.indexOf(ascii)!=-1){
+            if (str.indexOf(i) != -1) {
 
-                System.out.print(str.indexOf(i)+" ");
-            }else{
-                System.out.print(-1+" ");
+                result += str.indexOf(i) + " ";
+            } else {
+                result += -1 + " ";
             }
         }
+        System.out.println(result);
 
     }
 }
 
 
-class Test3{
-
-    public static void main(String[] args) {
-
-        String str = "abca";
-        System.out.println(str.indexOf("a"));
-    }
-}

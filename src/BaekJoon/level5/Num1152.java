@@ -20,6 +20,10 @@ public class Num1152 {
 //
 //        }
         // 공백으로 시장해서
-        System.out.println(str.trim().split(" ").length);
+        if(str.equals(" ")){
+            System.out.println("0");
+        }else {
+            System.out.println(str.trim().split(" ").length);
+        }
     }
 }
