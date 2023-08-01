@@ -6,6 +6,7 @@ public class Num1978 {
 
     public static void main(String[] args) {
 
+        //aaa
         Scanner sc = new Scanner(System.in);
 
         int first_num = sc.nextInt();

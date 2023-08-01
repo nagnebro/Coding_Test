@@ -13,6 +13,7 @@ public class Num11653 {
         do{
 
             for(int i = 2 ; i <= n; i++){ //굳이 n까지 돌릴 필요도없다 어차피 자기 자신/2(홀수는 아예제외)이상의 수는 약수가 될 수없기 때문이다.
+                // 다만 이때 n이 2나 3이라면 i의 초기값이 2이므로 예외상황이 발생하게 된다.
                 if(n%i == 0){
                     System.out.println(i);
                     n /= i;
@@ -21,7 +22,7 @@ public class Num11653 {
                     break;
                 }
             }
-        }while(n>2);
+        }while(n>=2);
 
     }
 }
