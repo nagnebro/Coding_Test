@@ -18,6 +18,7 @@ public class Num1436 {
         // 수식을 만들 수 있을지 for문을 돌려야 풀리는지 빨리 판단해야한다.
         //
 
+
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         long result = 0;
