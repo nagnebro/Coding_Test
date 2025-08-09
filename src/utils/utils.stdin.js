@@ -29,7 +29,6 @@ module.exports.getMultipleLine = function () {
  */
 module.exports.getMultipleLineWithSpace = function getMultipleLineWithSpace() {
   let input = fs.readFileSync('/dev/stdin').toString().trim().split('\n');
-  console.log(input);
   const n = input[0];
   input = input.slice(1);
   return { n, input };
